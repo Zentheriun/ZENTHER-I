@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SANTIAGO YATE - Interactive Project</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Pacifico&family=Righteous&family=Rowdies:wght@300;400;700&family=Viga&family=WDXL+Lubrifont+SC&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Loading Project...</h2>
+        </div>
+    </div>
+
+    <div class="particles" id="particles"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">SANTIAGO YATE</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <canvas id="bg-3d"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="floating-elements" id="floatingElements"></div>
+
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-subtitle">
+                    <i class="fab fa-github"></i>
+                    <span>GITHUB / BY ZENTHERIUN</span>
+                </div>
+                <h1 class="hero-title typing" id="heroTitle">SANTIAGO YATE</h1>
+                <p class="hero-description">
+                    Full-Stack Developer passionate about creating innovative digital experiences.
+                    Specializing in modern web technologies and user interface design.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="character-container">
+                    <img src="assets/Profile.png" alt="Santiago Yate" class="character-image"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x600/6366f1/ffffff?text=SANTIAGO+YATE';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <h3>Hello! I'm Santiago Yate</h3>
+                    <p>
+                        I'm a dedicated developer with 2 years of experience in web development, specializing in
+                        creating modern and responsive web applications. I strive to blend functionality with stunning
+                        design to deliver exceptional user experiences.
+                    </p>
+                    <p>
+                        Beyond coding, I enjoy exploring new technologies, contributing to open-source projects, and
+                        sharing knowledge within the developer community. My goal is to build impactful digital
+                        solutions that are both efficient and aesthetically pleasing.
+                    </p>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Technologies Mastered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>
+                        <i class="fas fa-code"></i>
+                        Frontend
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML5</span>
+                        <i class="fab fa-html5 text-4xl text-orange-500"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CSS3</span>
+                        <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <i class="fab fa-js-square text-4xl text-yellow-500"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">React</span>
+                        <i class="fab fa-react text-4xl text-blue-400"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Vue.js</span>
+                        <i class="fab fa-vuejs text-4xl text-green-500"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Vite</span>
+                        <img src="https://vitejs.dev/logo.svg" alt="Vite Logo" class="w-8 h-8">
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3>
+                        <i class="fas fa-server"></i>
+                        Backend
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Node.js</span>
+                        <i class="fab fa-node-js text-4xl text-green-600"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <i class="fab fa-python text-4xl text-blue-700"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Express.js</span>
+                        <img src="https://expressjs.com/images/favicon.png" alt="Express.js Logo" class="w-8 h-8">
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MongoDB</span>
+                        <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB Logo"
+                            class="w-8 h-8">
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3>
+                        <i class="fas fa-tools"></i>
+                        Tools & Design
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Git/GitHub</span>
+                        <i class="fab fa-github text-4xl text-white"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <i class="fab fa-docker text-4xl text-blue-600"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS</span>
+                        <i class="fab fa-aws text-4xl text-orange-400"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Figma</span>
+                        <i class="fab fa-figma text-4xl text-purple-500"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Blender</span>
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/116/750/small/blender-transparent-background-icon-free-png.png"
+                            alt="Blender Logo" class="w-8 h-8">
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3>
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile & Others
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">React Native</span>
+                        <i class="fas fa-mobile-alt text-4xl text-blue-400"></i>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Three.js</span>
+                        <img src="https://products.fileformat.com/es/3d/javascript/threejs/header-image.png"
+                            alt="Three.js Logo" class="w-8 h-8">
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">TypeScript</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+                            alt="TypeScript Logo" class="w-8 h-8">
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">GraphQL</span>
+                        <img src="https://graphql.org/img/logo.svg" alt="GraphQL Logo" class="w-8 h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coming Soon<span class="animated-dots">...</span></h3>
+                        <p class="project-description">
+                            Exciting projects are currently under development. Stay tuned for updates!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Innovation</span>
+                            <span class="tech-tag">Development</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coming Soon<span class="animated-dots">...</span></h3>
+                        <p class="project-description">
+                            Exciting projects are currently under development. Stay tuned for updates!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Innovation</span>
+                            <span class="tech-tag">Development</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coming Soon<span class="animated-dots">...</span></h3>
+                        <p class="project-description">
+                            Exciting projects are currently under development. Stay tuned for updates!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Innovation</span>
+                            <span class="tech-tag">Development</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coming Soon<span class="animated-dots">...</span></h3>
+                        <p class="project-description">
+                            Exciting projects are currently under development. Stay tuned for updates!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Innovation</span>
+                            <span class="tech-tag">Development</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coming Soon<span class="animated-dots">...</span></h3>
+                        <p class="project-description">
+                            Exciting projects are currently under development. Stay tuned for updates!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Innovation</span>
+                            <span class="tech-tag">Development</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coming Soon<span class="animated-dots">...</span></h3>
+                        <p class="project-description">
+                            Exciting projects are currently under development. Stay tuned for updates!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Innovation</span>
+                            <span class="tech-tag">Development</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Let's Work Together!</h3>
+                    <p>
+                        I'm always open to new opportunities and interesting projects.
+                        If you have an idea or need help with your next project,
+                        don't hesitate to reach out.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>Zentheriun@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+57 3214174002</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <p>Colombia</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin contact-icon"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <p><a href="https://www.linkedin.com/in/zentheriun/"
+                                        target="_blank">linkedin.com/in/zentheriun/</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Santiago Yate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
