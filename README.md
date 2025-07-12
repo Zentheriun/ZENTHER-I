@@ -1,5 +1,5 @@
 
-# One-Zenther Project
+# ZENTHER-I PROJECT
 
 <div align="center">
   <img src="https://github.com/Zentheriun/Zentheriun/blob/main/Resources/.IMGs/Web%20-%20One-Zenther.png" alt="One-Zenther Preview" width="700"/>
@@ -22,7 +22,7 @@
 
 ## 🚀 Project Overview
 
-**One-Zenther** is an interactive portfolio combining modern design, advanced animations, 3D integration with **Three.js**, and an immersive UI experience. This project serves as a showcase of your skills as a **Full Stack Developer**, focusing on creativity, visual presentation, and interactivity.
+**Zenther-Ir** is an interactive portfolio combining modern design, advanced animations, 3D integration with **Three.js**, and an immersive UI experience. This project serves as a showcase of your skills as a **Full Stack Developer**, focusing on creativity, visual presentation, and interactivity.
 
 ---
 
@@ -52,7 +52,7 @@
 ## 📂 Project Structure
 
 ```
-📁 ONE-ZENTHER/
+📁 ZENTHER-I/
 ├── node_modules/
 ├── public/
 │   └── assets/images/
@@ -89,7 +89,7 @@
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/Zentheriun/Zentheriun.git
+git clone https://github.com/Zentheriun/ZENTHER-I.git
 ```
 
 2. **Install dependencies**:
